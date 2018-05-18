@@ -1,0 +1,11 @@
+.DS_Store
+_OLD/
+_OTHER/
+apidoc/
+apidoc.json
+application/config/database.php
+application/config/config.php
+application/logs/
+node_modules
+.phpintel/
+/images/Thumbs.db

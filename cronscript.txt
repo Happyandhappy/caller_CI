@@ -1,0 +1,2 @@
+59 23 * * 0 php /var/www/callertech.com/index.php cron send_weekly_report
+0 0 1 * * php /var/www/callertech.com/index.php cron monthly_reactivate

@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+.clr{ clear:both;}
+.acc-out{width:100%; height:auto;  float:left;  }
+.acc-left{ width:320px; height:auto; float:left; }
+.search-main{ float:left; margin-bottom:5px;}
+.left-search{width:195px; height:30px; margin-top:5px; padding-left:5px;float:left; }
+.search-box{width:82px; height:32px; border-radius:5px; background-color:#8cc152; color:#fff; text-align:center; line-height:30px; float:left;margin-top:5px; margin-left:8px; font-weight:normal; font-size:12px;}
+.search-box a{color:#fff; text-decoration:none;}
+.search-text{font-style:normal; font-size:14px; width:320px; margin-bottom:5px;}
+.searchno{ float:left;width:320px; margin-bottom:5px;}
+.searchno1{ float:left; margin-top:5px;}
+
+.acc-right{width:750px; height:auto; margin-left:10px; float:left; }
+.acc-head{font-size:28px; font-weight:normal; font-style:normal; float:left; margin-bottom:20px;}
+
+.editopt{float:right; color:#0066FF;}
+.fname1{float:left; width: 90%;
+    height: 30px; background-color:#ebebe4; border:solid 1px #CCCCCC;
+    text-indent: 5px; line-height:30px;font-size:14px; }
+
+.fname12{float:left; width: 90%;
+    height: 30px;  border:solid 1px #CCCCCC;
+    text-indent: 5px; line-height:30px;font-size:14px; }
+.phnno{float:left; width:50%; height:30px;
+			 
+			border:solid 1px #CCCCCC;
+			text-indent: 5px;}	
+.zipcode12{ float:left; width:30%; height:30px;
+			 
+			border:solid 1px #CCCCCC;
+			text-indent: 5px;}
+.chkbox1{ float:left; width:90%; margin-top:70px;}	
+
+.save{width:120px; height:50px; background-color:#ff8500; color:#fff; text-align:center; line-height:50px;  border-radius:5px; float:left; margin-top:30px;}
+.save a{color:#fff; text-decoration:none;}		
+

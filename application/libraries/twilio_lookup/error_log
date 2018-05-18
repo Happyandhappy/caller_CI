@@ -1,0 +1,73 @@
+[04-Dec-2016 22:51:29 America/Los_Angeles] PHP Warning:  require_once(twilio/autoload.php): failed to open stream: No such file or directory in /home/ewajib5/public_html/twilio_lookup/index.php on line 2
+[04-Dec-2016 22:51:29 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'twilio/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ewajib5/public_html/twilio_lookup/index.php on line 2
+[04-Dec-2016 22:53:06 America/Los_Angeles] PHP Warning:  require_once(twilio/autoload.php): failed to open stream: No such file or directory in /home/ewajib5/public_html/twilio_lookup/index.php on line 13
+[04-Dec-2016 22:53:06 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'twilio/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ewajib5/public_html/twilio_lookup/index.php on line 13
+[04-Dec-2016 22:53:13 America/Los_Angeles] PHP Warning:  require_once(twilio/autoload.php): failed to open stream: No such file or directory in /home/ewajib5/public_html/twilio_lookup/index.php on line 13
+[04-Dec-2016 22:53:13 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'twilio/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ewajib5/public_html/twilio_lookup/index.php on line 13
+[04-Dec-2016 22:53:15 America/Los_Angeles] PHP Warning:  require_once(twilio/autoload.php): failed to open stream: No such file or directory in /home/ewajib5/public_html/twilio_lookup/index.php on line 13
+[04-Dec-2016 22:53:15 America/Los_Angeles] PHP Fatal error:  require_once(): Failed opening required 'twilio/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ewajib5/public_html/twilio_lookup/index.php on line 13
+[04-Dec-2016 22:58:36 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\RestException' with message '[HTTP 404] Unable to fetch record: The requested resource /PhoneNumbers/+91253533518 was not found' in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php:85
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php(106): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to fetch...')
+#1 /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberContext.php(57): Twilio\Version->fetch('GET', '/PhoneNumbers/%...', Array)
+#2 /home/ewajib5/public_html/twilio_lookup/index.php(33): Twilio\Rest\Lookups\V1\PhoneNumberContext->fetch(Array)
+#3 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php on line 85
+[05-Dec-2016 02:26:52 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\TwilioException' with message 'Unknown property: CallerType' in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php:99
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/index.php(40): Twilio\Rest\Lookups\V1\PhoneNumberInstance->__get('CallerType')
+#1 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php on line 99
+[05-Dec-2016 02:31:45 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\TwilioException' with message 'Unknown property: CallerType' in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php:99
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/index.php(40): Twilio\Rest\Lookups\V1\PhoneNumberInstance->__get('CallerType')
+#1 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php on line 99
+[05-Dec-2016 02:32:54 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\TwilioException' with message 'Unknown property: CallerType' in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php:99
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/index.php(40): Twilio\Rest\Lookups\V1\PhoneNumberInstance->__get('CallerType')
+#1 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php on line 99
+[05-Dec-2016 02:33:16 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\TwilioException' with message 'Unknown property: CallerType' in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php:99
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/index.php(41): Twilio\Rest\Lookups\V1\PhoneNumberInstance->__get('CallerType')
+#1 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Lookups/V1/PhoneNumberInstance.php on line 99
+[05-Dec-2016 03:18:49 America/Los_Angeles] PHP Fatal error:  Cannot use Twilio\Rest\Client as Client because the name is already in use in /home/ewajib5/public_html/twilio_lookup/index.php on line 56
+[05-Dec-2016 03:19:40 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\ConfigurationException' with message 'Credentials are required to create a Client' in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Client.php:132
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/index.php(17): Twilio\Rest\Client->__construct('AC0b4833dcf2456...', NULL)
+#1 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Client.php on line 132
+[05-Dec-2016 03:21:20 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\RestException' with message '[HTTP 404] Unable to update record: The requested resource /2010-04-01/Accounts/AC0b4833dcf2456fd0a83b345e486d4310/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e.json was not found' in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php:85
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php(127): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to updat...')
+#1 /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Api/V2010/Account/IncomingPhoneNumberContext.php(71): Twilio\Version->update('POST', '/Accounts/AC0b4...', Array, Array)
+#2 /home/ewajib5/public_html/twilio_lookup/index.php(24): Twilio\Rest\Api\V2010\Account\IncomingPhoneNumberContext->update(Array)
+#3 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php on line 85
+[05-Dec-2016 03:21:40 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\RestException' with message '[HTTP 404] Unable to update record: The requested resource /2010-04-01/Accounts/AC0b4833dcf2456fd0a83b345e486d4310/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e.json was not found' in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php:85
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php(127): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to updat...')
+#1 /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Api/V2010/Account/IncomingPhoneNumberContext.php(71): Twilio\Version->update('POST', '/Accounts/AC0b4...', Array, Array)
+#2 /home/ewajib5/public_html/twilio_lookup/index.php(24): Twilio\Rest\Api\V2010\Account\IncomingPhoneNumberContext->update(Array)
+#3 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php on line 85
+[05-Dec-2016 03:21:56 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\RestException' with message '[HTTP 404] Unable to update record: The requested resource /2010-04-01/Accounts/AC0b4833dcf2456fd0a83b345e486d4310/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e.json was not found' in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php:85
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php(127): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to updat...')
+#1 /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Api/V2010/Account/IncomingPhoneNumberContext.php(71): Twilio\Version->update('POST', '/Accounts/AC0b4...', Array, Array)
+#2 /home/ewajib5/public_html/twilio_lookup/index.php(24): Twilio\Rest\Api\V2010\Account\IncomingPhoneNumberContext->update(Array)
+#3 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php on line 85
+[05-Dec-2016 03:49:35 America/Los_Angeles] PHP Fatal error:  Cannot use Twilio\Rest\Client as Client because the name is already in use in /home/ewajib5/public_html/twilio_lookup/index.php on line 16
+[05-Dec-2016 03:58:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}' in /home/ewajib5/public_html/twilio_lookup/index.php on line 27
+[05-Dec-2016 03:58:17 America/Los_Angeles] PHP Fatal error:  Call to a member function incomingPhoneNumbers() on a non-object in /home/ewajib5/public_html/twilio_lookup/index.php on line 17
+[05-Dec-2016 03:58:59 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'Twilio\Exceptions\RestException' with message '[HTTP 404] Unable to update record: The requested resource /2010-04-01/Accounts/AC0b4833dcf2456fd0a83b345e486d4310/IncomingPhoneNumbers/PN2a0747eba6abf96b7e3c3ff0b4530f6e.json was not found' in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php:85
+Stack trace:
+#0 /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php(127): Twilio\Version->exception(Object(Twilio\Http\Response), 'Unable to updat...')
+#1 /home/ewajib5/public_html/twilio_lookup/Twilio/Rest/Api/V2010/Account/IncomingPhoneNumberContext.php(71): Twilio\Version->update('POST', '/Accounts/AC0b4...', Array, Array)
+#2 /home/ewajib5/public_html/twilio_lookup/index.php(24): Twilio\Rest\Api\V2010\Account\IncomingPhoneNumberContext->update(Array)
+#3 {main}
+  thrown in /home/ewajib5/public_html/twilio_lookup/Twilio/Version.php on line 85
+[05-Dec-2016 04:01:14 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '=' in /home/ewajib5/public_html/twilio_lookup/index.php on line 13

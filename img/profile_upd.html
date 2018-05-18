@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--
+		Charisma v1.0.0
+
+		Copyright 2012 Muhammad Usman
+		Licensed under the Apache License v2.0
+		http://www.apache.org/licenses/LICENSE-2.0
+
+		http://usman.it
+		http://twitter.com/halalit_usman
+	-->
+	<meta charset="utf-8">
+	<title>Free HTML5 Bootstrap Admin Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+	<meta name="author" content="Muhammad Usman">
+
+	<!-- The styles -->
+	<link id="bs-css" href="css/bootstrap-cerulean.css" rel="stylesheet">
+	<style type="text/css">
+	  body {
+		padding-bottom: 40px;
+	  }
+	  .sidebar-nav {
+		padding: 9px 0;
+	  }
+	  .company-description-tagline-textarea {
+    width: 95%;
+    margin: 6px 6px 6px 12px;
+    height: 100px;
+    padding: 5px;
+    resize: none;
+}
+.company-description-tagline-remaining-chars {
+    padding-left: 12px;
+}
+.font-label{
+	font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #636065;
+}
+.padded-bottom {
+    padding-bottom: 10px;
+}
+.padded-top-double {
+    padding-top: 20px;
+}
+
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  margin-left: 50px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+.list-group {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #5A55A3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #5A55A3;
+  background-image: #5A55A3;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #5A55A3;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+	</style>
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/charisma-app.css" rel="stylesheet">
+	<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+	<link href='css/fullcalendar.css' rel='stylesheet'>
+	<link href='css/fullcalendar.print.css' rel='stylesheet'  media='print'>
+	<link href='css/chosen.css' rel='stylesheet'>
+	<link href='css/uniform.default.css' rel='stylesheet'>
+	<link href='css/colorbox.css' rel='stylesheet'>
+	<link href='css/jquery.cleditor.css' rel='stylesheet'>
+	<link href='css/jquery.noty.css' rel='stylesheet'>
+	<link href='css/noty_theme_default.css' rel='stylesheet'>
+	<link href='css/elfinder.min.css' rel='stylesheet'>
+	<link href='css/elfinder.theme.css' rel='stylesheet'>
+	<link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+	<link href='css/opa-icons.css' rel='stylesheet'>
+	<link href='css/uploadify.css' rel='stylesheet'>
+
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- The fav icon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+		
+</head>
+
+<body>
+		<!-- topbar starts -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="index.html"> <img alt="Charisma Logo" src="img/logo20.png" /> <span>Charisma</span></a>
+				
+				<!-- theme selector starts -->
+				<div class="btn-group pull-right theme-container" >
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-tint"></i><span class="hidden-phone"> Change Theme / Skin</span>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" id="themes">
+						<li><a data-value="classic" href="#"><i class="icon-blank"></i> Classic</a></li>
+						<li><a data-value="cerulean" href="#"><i class="icon-blank"></i> Cerulean</a></li>
+						<li><a data-value="cyborg" href="#"><i class="icon-blank"></i> Cyborg</a></li>
+						<li><a data-value="redy" href="#"><i class="icon-blank"></i> Redy</a></li>
+						<li><a data-value="journal" href="#"><i class="icon-blank"></i> Journal</a></li>
+						<li><a data-value="simplex" href="#"><i class="icon-blank"></i> Simplex</a></li>
+						<li><a data-value="slate" href="#"><i class="icon-blank"></i> Slate</a></li>
+						<li><a data-value="spacelab" href="#"><i class="icon-blank"></i> Spacelab</a></li>
+						<li><a data-value="united" href="#"><i class="icon-blank"></i> United</a></li>
+					</ul>
+				</div>
+				<!-- theme selector ends -->
+				
+				<!-- user dropdown starts -->
+				<div class="btn-group pull-right" >
+					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="icon-user"></i><span class="hidden-phone"> admin</span>
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Profile</a></li>
+						<li class="divider"></li>
+						<li><a href="login.html">Logout</a></li>
+					</ul>
+				</div>
+				<!-- user dropdown ends -->
+				
+				<div class="top-nav nav-collapse">
+					<ul class="nav">
+						<li><a href="#">Visit Site</a></li>
+						<li>
+							<form class="navbar-search pull-left">
+								<input placeholder="Search" class="search-query span2" name="query" type="text">
+							</form>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	<!-- topbar ends -->
+		<div class="container-fluid">
+		<div class="row-fluid">
+				
+			<!-- left menu starts -->
+			<div class="span12">
+  
+<div class="span3" style="margin-left:40px;">
+<div class="progress progress-danger progress-striped ">
+							<div class="bar" style="width: 80%"></div>
+						</div>
+</div></div>
+				<div class="box span3">
+					<div class="box-header well" data-original-title="">
+						<h2><i class="icon-list"></i> Weekly Stat</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<ul class="dashboard-list">
+							<li>
+								<a href="#">
+									<i class="icon-arrow-up"></i>                               
+									<span class="green">92</span>
+									New Comments                                    
+								</a>
+							</li>
+						  <li>
+							<a href="#">
+							  <i class="icon-arrow-down"></i>
+							  <span class="red">15</span>
+							  New Registrations
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							  <i class="icon-minus"></i>
+							  <span class="blue">36</span>
+							  New Articles                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							  <i class="icon-comment"></i>
+							  <span class="yellow">45</span>
+							  User reviews                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							  <i class="icon-arrow-up"></i>                               
+							  <span class="green">112</span>
+							  New Comments                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							  <i class="icon-arrow-down"></i>
+							  <span class="red">31</span>
+							  New Registrations
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							  <i class="icon-minus"></i>
+							  <span class="blue">93</span>
+							  New Articles                                    
+							</a>
+						  </li>
+						  <li>
+							<a href="#">
+							  <i class="icon-comment"></i>
+							  <span class="yellow">254</span>
+							  User reviews                                    
+							</a>
+						  </li>
+						</ul>
+					</div>
+				
+			</div><!--/span-->
+			<!-- left menu ends -->
+			
+			<noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+			
+			<div id="content" class="span8">
+			<!-- content starts -->
+			
+
+			<div>
+				<ul class="breadcrumb">
+					<li>
+						<a href="#">Home</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a href="#">Forms</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="row-fluid sortable">
+            
+            <div class="span12 " style="background-image: url(./img/gallery/1.jpg); background-size:cover; background-repeat:no-repeat; height:200px;">
+            
+                 <a class="btn btn-large pull-right" href="#" data-target="mymodal_banner" id="coverPhotoEdit"><i class="icon-edit"></i> Edit</a>
+
+            
+            </div>
+            <div class="span12 ">
+            
+            <div class="span2" style="
+           background-image: url(./img/gallery/1.jpg);background-size:cover;background-repeat:no-repeat;height:100px;margin-top: -80px;border: solid #fff 4px;">
+                        
+                        <a class="btn btn-large" data-target="mymodal_profileSnap" id="profilePhotoEdit" href="#" style="
+    /* bottom: 0; */
+    /* left: 0; */
+    /* position: relative; */
+    margin-top: 100px;
+"><i class="icon-edit"></i> Edit</a>
+
+
+            </div>
+            
+          <div class="span8 center ">
+          <p>
+        <h2>  Confort LTD</h2>
+
+Click 'Edit' to add a description about your company
+
+          </p>
+     <a class="btn btn-large" href="#" data-target="myModal" id="compEdit"><i class="icon-edit"></i> Edit</a>
+
+          </div>
+          
+            </div>
+            
+            <div class="span12 profile_box">
+            
+            <legend>Gallery of your work</legend>
+            <div class="center">
+            <h2>Add photos to your gallery</h2>
+<br />
+Showcase photos of past projects and your quality of workmanship
+                       <a class="btn btn-large" href="#"><i class="icon-edit"></i> Edit</a>
+
+</div>
+            
+           
+            </div>
+            
+            
+            <div class="span12 profile_box">
+            
+            <legend>Services You Offer</legend>
+            <div class="span2">
+            </div>
+            <div class="span4">
+            <ul class="unstyled">
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+            
+            </ul>
+            
+            </div>
+            <div class="span4">
+            <ul class="unstyled">
+                <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+           <li> <i class="icon-check"></i> Bathroom Repair</li>
+            
+            </ul>
+            </div>
+            <div class="span2">
+     <a class="btn btn-large" href="#" data-target="myModal-services" id="myModal-services"><i class="icon-edit"></i> Edit</a>
+
+            </div>
+           
+            </div>
+            
+             <div class="span12 profile_box">
+            
+            <legend>Certifications</legend>
+            <p>Your Gas Safe, Part P and TrustMark registration 
+            details will be shown here if you have them. 
+            Don't worry - if you don't have any certifications to upload, 
+            then this section will not be shown to homeowners.
+            </p>
+            
+            <div class="span12">
+            <legend>Gas Safe</legend>
+            <p> No certificate added</p>
+     <a class="btn btn-large pull-right" href="#" id="gascertEdit"><i class="icon-edit"></i> Add Certificate</a>
+
+            </div>
+            <div class="span12">
+            <legend>PartP</legend>    
+            <p> No PartP registration details uploaded</p>
+              <a class="btn btn-large pull-right" href="#" id="partpcertEdit"><i class="icon-edit"></i> Add Certificate</a>
+
+            
+            </div>
+            
+            </div>
+            
+			  <!--/span-->
+
+			</div><!--/row--><!--/row--><!--/row-->
+    
+					<!-- content ends -->
+			</div><!--/#content.span10-->
+				</div><!--/fluid-row-->
+				
+		<hr>
+
+		<div class="modal hide fade" id="mymodal_banner">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">�</button>
+				<h3>Company Cover Photo</h3>
+			</div>
+			<div class="modal-body">
+				<div class="font-label padded-bottom">Photo</div>
+                <p>
+                It's a fact, homeowners feel more comfortable when they can see a picture of tradespeople before they come to the door.
+So don't be shy - say cheese and get more work with that winning smile.</p>
+<div class="font_label padded-bottom">Select a photo you wish to upload</div>
+<div class="uploader" id="uniform-fileInput">
+<input class="input-file uniform_on" id="fileInput" type="file" size="19" style="opacity: 0;">
+<span class="filename">No file selected</span><span class="action">Choose File</span></div>
+<p class="padded-top-double"><u>Note:</u> 
+photos cannot contain phone numbers or web addresses.
+<br>Including these may result in immediate termination of your membership.</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Save changes</a>
+			</div>
+		</div>
+        
+        <div class="modal hide fade" id="mymodal_profileSnap">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">�</button>
+				<h3>Profile Photo Upload</h3>
+			</div>
+			<div class="modal-body">
+				<div class="font-label padded-bottom">Photo</div>
+                <p>
+               It's a fact, homeowners feel more comfortable when they can see a picture of tradespeople before they come to the door.
+So don't be shy - say cheese and get more work with that winning smile.</p>
+<div class="font_label padded-bottom">Select a photo you wish to upload</div>
+<div class="uploader" id="uniform-fileInput">
+<input class="input-file uniform_on" id="fileInput" type="file" size="19" style="opacity: 0;">
+<span class="filename">No file selected</span><span class="action">Choose File</span></div>
+<p class="padded-top-double"><u>Note:</u> 
+photos cannot contain phone numbers or web addresses.
+<br>Including these may result in immediate termination of your membership.</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Save changes</a>
+			</div>
+		</div>
+        
+        
+        
+        <div class="modal hide fade" id="myModal">
+			<div class="modal-header">
+							<h3>Company Description</h3>
+			</div>
+			<div class="modal-body">
+            <textarea class="company-description-tagline-textarea" name="taglineText" id="tagline-textarea" maxlength="255" placeholder="Write some infomation about your company here"></textarea>
+			<p class="company-description-tagline-remaining-chars"><span id="tagline-remaining-chars">255</span> of 255 characters remaining</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Save changes</a>
+			</div>
+		</div>
+        
+        <div class="modal hide fade" id="myModal_gsafecert">
+			<div class="modal-header">
+							<h3>Gas Safe Certificate</h3>
+			</div>
+			<div class="modal-body">
+            <form class="form-horizontal">
+							<fieldset>
+							  <div class="control-group">
+								<label class="control-label" for="focusedInput">Registered Name</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" name="reg-name" id="reg-name" type="text" value="This is focused…">
+								</div>
+							  </div>
+							 
+                              <div class="control-group">
+								<label class="control-label" for="focusedInput">Registered Number</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" name="reg-number" id="reg-number" type="text" placeholder="Registeration Number">
+								</div>
+							  </div>
+							 
+                             <div class="control-group">
+								<label class="control-label" for="focusedInput">Expiry Date</label>
+								<div class="controls">
+								  <input class="input-xlarge focused"  name="reg-date" id="reg-date" type="date" placeholder="DD/MM/YY">
+								</div>
+							  </div>
+							 
+							
+							  
+							 
+							  
+							  
+							  
+							 
+							  <div>
+								<button type="submit" class="btn btn-primary">Save changes</button>
+								
+							  </div>
+							</fieldset>
+						  </form>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				
+			</div>
+		</div>
+        
+      
+        
+        <div class="modal hide fade in" id="modal-services" style="display: block;width:90%;left:25%">
+			<div class="modal-header">
+							<h3>Services You offer</h3>
+			</div>
+			<div class="modal-body">
+            
+                          
+                          <!-- modal services start -->
+     <div class="row">
+<!--        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+--> 
+ <div class="span11 bhoechie-tab-container">
+						              <div class="span3 bhoechie-tab-menu">       
+	      <div class="list-group">
+                <a href="#" class="list-group-item text-center active">
+                  <h4 class="glyphicon glyphicon-plane"></h4><br>Category 1
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-road"></h4><br>Category 2
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-home"></h4><br>Category 3
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-cutlery"></h4><br>Category 4
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br>Category 5
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br>Category 6
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br>Category 7
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br>Category 8
+                </a>
+                 <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br>Category 9
+                </a>
+                 <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br>Category 10
+                </a>
+              </div>
+            </div>
+<!--            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+-->              
+  <!-- flight section -->
+        <div class="span7 bhoechie-tab">
+                <div class="bhoechie-tab-content active">
+                   <div class="control-group">
+								<label class="control-label">Category Name</label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+                  <div class="control-group">
+								<label class="control-label">Category Name: Category 2</label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+    
+                <!-- hotel search -->
+                <div class="bhoechie-tab-content">
+                    <div class="control-group">
+								<label class="control-label">Category Name: Category 3</label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                <div class="bhoechie-tab-content">
+                   <div class="control-group">
+								<label class="control-label">Category Name: Category 4</label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                <div class="bhoechie-tab-content">
+                  <div class="control-group">
+								<label class="control-label">Category Name: Category 5 </label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                
+                <div class="bhoechie-tab-content">
+                  <div class="control-group">
+								<label class="control-label">Category Name: Category 6 </label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                
+                <div class="bhoechie-tab-content">
+                  <div class="control-group">
+								<label class="control-label">Category Name: Category 7 </label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                
+                <div class="bhoechie-tab-content">
+                  <div class="control-group">
+								<label class="control-label">Category Name: Category 8 </label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                
+                <div class="bhoechie-tab-content">
+                  <div class="control-group">
+								<label class="control-label">Category Name: Category 9 </label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                
+                <div class="bhoechie-tab-content">
+                  <div class="control-group">
+								<label class="control-label">Category Name: Category 10 </label>
+                                 <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;" checked="checked"></span></div> Main Category
+								  </label>
+								<div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 1
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 2
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 3
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 4
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 5
+								  </label>
+                                  
+								</div>
+                                
+                                <div class="controls">
+                                
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1" style="opacity: 0;"></span></div> Sub Category 6
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option2" style="opacity: 0;"></span></div> Sub Category 7
+								  </label>
+								  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 8
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 9
+								  </label>
+                                  <label class="checkbox inline">
+									<div class="checker" id="uniform-inlineCheckbox3"><span class="checked"><input type="checkbox" id="inlineCheckbox3" value="option3" style="opacity: 0;"></span></div>Sub Category 10
+								  </label>
+                                  
+								</div>
+                                
+							  </div>
+                </div>
+                
+            </div>
+        </div>
+  </div>
+
+                          
+                          <!-- modal services end -->
+                          
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				
+			</div>
+		</div>
+        
+        <div class="modal hide fade" id="myModal_partpcert">
+			<div class="modal-header">
+							<h3>Part p Certificate</h3>
+                            <p>To add new registration details click 'Add registration'.</p>
+			</div>
+			<div class="modal-body">
+            <form class="form-horizontal">
+							<fieldset>
+							  <div class="control-group">
+								<label class="control-label" for="focusedInput">Registered Name</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" name="partp-reg-name" id="partp-reg-name" type="text" value="This is focused…">
+								</div>
+							  </div>
+							 
+                              <div class="control-group">
+								<label class="control-label" for="focusedInput">Registered Number</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" name="partp-reg-number" id="partp-reg-number" type="text" placeholder="Registeration Number">
+								</div>
+							  </div>
+							 
+                             <div class="control-group">
+								<label class="control-label" for="focusedInput">Expiry Date</label>
+								<div class="controls">
+								  <input class="input-xlarge focused"  name="partp-reg-date" id="partp-reg-date" type="date" placeholder="DD/MM/YY">
+								</div>
+							  </div>
+							 <div class="controls-group">
+                             <label class="control-label" for="partp-provider">Registration Body</label>
+								<div class="controls">
+								  <select id="partp-provider">
+									<option value="">Select</option><option value="BRE">BRE Certification</option><option value="BSI">BSI (British Standards Institute)</option><option value="ELECSA">ELECSA</option><option value="NICEIC">NICEIC Certification Services</option><option value="NAPIT">NAPIT Certification</option>
+								  </select>
+                                  </div>
+								</div>
+							
+							  
+							 
+							  
+							  
+							  
+							 
+							  <div>
+								<button type="submit" class="btn btn-primary">Save changes</button>
+								
+							  </div>
+							</fieldset>
+						  </form>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				
+			</div>
+		</div>
+
+		<footer>
+			<p class="pull-left">&copy; <a href="http://usman.it" target="_blank">Muhammad Usman</a> 2012</p>
+			<p class="pull-right">Powered by: <a href="http://usman.it/free-responsive-admin-template">Charisma</a></p>
+		</footer>
+		
+	</div><!--/.fluid-container-->
+
+	<!-- external javascript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+	<!-- transition / effect library -->
+	<script src="js/bootstrap-transition.js"></script>
+	<!-- alert enhancer library -->
+	<script src="js/bootstrap-alert.js"></script>
+	<!-- modal / dialog library -->
+	<script src="js/bootstrap-modal.js"></script>
+	<!-- custom dropdown library -->
+	<script src="js/bootstrap-dropdown.js"></script>
+	<!-- scrolspy library -->
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<!-- library for creating tabs -->
+	<script src="js/bootstrap-tab.js"></script>
+	<!-- library for advanced tooltip -->
+	<script src="js/bootstrap-tooltip.js"></script>
+	<!-- popover effect library -->
+	<script src="js/bootstrap-popover.js"></script>
+	<!-- button enhancer library -->
+	<script src="js/bootstrap-button.js"></script>
+	<!-- accordion library (optional, not used in demo) -->
+	<script src="js/bootstrap-collapse.js"></script>
+	<!-- carousel slideshow library (optional, not used in demo) -->
+	<script src="js/bootstrap-carousel.js"></script>
+	<!-- autocomplete library -->
+	<script src="js/bootstrap-typeahead.js"></script>
+	<!-- tour library -->
+	<script src="js/bootstrap-tour.js"></script>
+	<!-- library for cookie management -->
+	<script src="js/jquery.cookie.js"></script>
+	<!-- calander plugin -->
+	<script src='js/fullcalendar.min.js'></script>
+	<!-- data table plugin -->
+	<script src='js/jquery.dataTables.min.js'></script>
+
+	<!-- chart libraries start -->
+	<script src="js/excanvas.js"></script>
+	<script src="js/jquery.flot.min.js"></script>
+	<script src="js/jquery.flot.pie.min.js"></script>
+	<script src="js/jquery.flot.stack.js"></script>
+	<script src="js/jquery.flot.resize.min.js"></script>
+	<!-- chart libraries end -->
+
+	<!-- select or dropdown enhancer -->
+	<script src="js/jquery.chosen.min.js"></script>
+	<!-- checkbox, radio, and file input styler -->
+	<script src="js/jquery.uniform.min.js"></script>
+	<!-- plugin for gallery image view -->
+	<script src="js/jquery.colorbox.min.js"></script>
+	<!-- rich text editor library -->
+	<script src="js/jquery.cleditor.min.js"></script>
+	<!-- notification plugin -->
+	<script src="js/jquery.noty.js"></script>
+	<!-- file manager library -->
+	<script src="js/jquery.elfinder.min.js"></script>
+	<!-- star rating plugin -->
+	<script src="js/jquery.raty.min.js"></script>
+	<!-- for iOS style toggle switch -->
+	<script src="js/jquery.iphone.toggle.js"></script>
+	<!-- autogrowing textarea plugin -->
+	<script src="js/jquery.autogrow-textarea.js"></script>
+	<!-- multiple file upload plugin -->
+	<script src="js/jquery.uploadify-3.1.min.js"></script>
+	<!-- history.js for cross-browser state change on ajax -->
+	<script src="js/jquery.history.js"></script>
+	<!-- application script for Charisma demo -->
+	<script src="js/charisma.js"></script>
+	
+		<script>
+		$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+		$('#compEdit').click(function(){
+	$('#myModal').modal({show:true})
+});
+$('#coverPhotoEdit').click(function(){
+	$('#mymodal_banner').modal({show:true})
+});
+
+
+$('#profilePhotoEdit').click(function(){
+	$('#mymodal_profileSnap').modal({show:true})
+});
+
+$('#gascertEdit').click(function(){
+	$('#myModal_gsafecert').modal({show:true})
+});
+$('#partpcertEdit').click(function(){
+	$('#myModal_partpcert').modal({show:true})
+});
+
+$('#myModal-services').click(function(){
+	$('#modal-services').modal({show:true})
+});
+
+
+
+
+		</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+$green: #2cc185;
+$dark-grey: #74777b;
+$medium-grey: #e7ecea;
+$light-grey: #f1f4f3;
+$bg-color: #eee;
+$wht: #fff;
+$link-color: $green;
+$link-hover: darken($green, 10%);
+$font: 'Open Sans', sans-serif;
+
+body {
+     background-color: $bg-color;
+     font-family: $font;
+}
+
+header {
+     background-color: $green;
+     color: $wht;
+     padding: 2em 1em;
+     margin-bottom: 1.5em;
+}
+
+h1 {
+     font-weight: 300;
+     text-align: center;
+}
+
+.container {
+     position: relative;
+     margin: 0 auto;
+}
+
+button {
+     background-color: $link-color;
+     color: $wht;
+     border: 0;
+     padding: 1em 1.5em;
+     &:hover {
+          background-color: $link-hover;
+          color: $wht;
+     }
+     &:focus {
+          background-color: $link-hover;
+          color: $wht;
+     } 
+}
+
+.program {
+     position: relative;
+     background-color: $wht;
+     display: inline-block;
+     width: 100%;
+     border-top: 1px solid $light-grey;
+     border-bottom: 1px solid $light-grey;
+     font-weight: 700;
+     color: $dark-grey;
+     vertical-align: middle;
+}
+
+.program .fa {
+     position: relative;
+     float: right;
+}
+
+.program h4 {
+     position: relative;
+     top: 0.8em;
+     margin: 0;
+     font-size: 14px;
+     font-weight: 700;
+}
+
+.program a {
+     position: relative;
+     display: block;
+     color: $dark-grey;
+     padding: 1em 1em 2.5em 1em;
+     text-decoration: none;
+     &:hover {
+          text-decoration: none;
+          color: $green;
+          background-color: $medium-grey;
+          transition: 0.3s;
+     }
+}
+
+.program-desc {
+     background-color: $light-grey;
+     color: $dark-grey;
+     z-index: 2;
+     padding: 20px 15px;
+}
+
+@media (min-width: 480px) {
+     .container {
+          max-width: 80%;
+     }
+}
+
+@media (min-width: 768px) {
+     .container {
+          max-width: 600px;
+     }
+}
